@@ -8,8 +8,7 @@ import altair as alt
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="AI-Driven Insights System",
-    page_icon="💡",
+    page_title="LookAhead - Sales Forecaster",
     layout="wide"
 )
 
@@ -41,14 +40,34 @@ if model_results:
 else:
     historical_data = pd.DataFrame()
 
-st.title("💡 AI-Driven E-Commerce Insights System")
-st.write("""
-Welcome to the integrated analytics platform. Use the tabs below to navigate between
-the predictive sales **Forecaster** and the **Performance Dashboard**.
-""")
-
+st.markdown("<h1 style='text-align: center;'>LookAhead - Sales Forecaster</h1>", unsafe_allow_html=True)
+st.markdown("""
+<div style="
+    background-color: #40474A;
+    padding: 25px 40px;
+    border-radius: 15px;
+    border: 1px solid #d3d3d3;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+">
+    <h2>
+        LookAhead demonstrates the construction of a robust, scalable, and automated data system.
+    </h2>
+    <p>
+        The UCI dataset provides a perfect real-world sandbox:
+        <ul style='text-align: left; display: inline-block;'>
+            <li><strong>Sufficient Scale:</strong> Over 500,000 records to justify a cloud data warehouse.</li>
+            <li><strong>Realistic Data Quality:</strong> Contains missing values, cancellations, and inconsistent types that require a robust data cleaning and transformation stage.</li>
+            <li><strong>Clear Business Patterns:</strong> Exhibits strong seasonality, making it ideal for time-series forecasting.</li>
+        </ul>
+    </p>
+    <p>
+        This project focuses on the <strong>timeless process</strong> of building a data-driven system, showcasing how to engineer a solution that moves an organization from reactive reporting to proactive, AI-supported strategic planning.
+    </p>
+</div>
+""", unsafe_allow_html=True)
 # --- Create Tabs ---
-tab1, tab2 = st.tabs(["📈 Sales Forecaster", "📊 Performance Dashboard"])
+tab1, tab2 = st.tabs([" Sales Forecaster", " Performance Dashboard"])
 
 # ==============================================================================
 # TAB 1: FORECASTER
